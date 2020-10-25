@@ -1,10 +1,5 @@
 - hosts: localhost
   tasks:
-  
-  - name: Disable SELinux
-    selinux:
-      state: disabled
-    
 
   - name: Disable SELinux
     selinux:
