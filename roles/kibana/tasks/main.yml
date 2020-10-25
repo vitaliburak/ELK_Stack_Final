@@ -9,6 +9,7 @@
   template:
     src: kibana.config.j2
     dest: /etc/kibana/kibana.yml
+  notify: Restart kibana
 
 - name: Force systemd to reread configs
   systemd: daemon_reload=yes
@@ -23,6 +24,7 @@
   template:
     src: elk.conf.j2
     dest: /etc/nginx/conf.d/elk.conf
+  notify: Restart Nginx
 
 
 # - name: Create kibanaadmin and password
