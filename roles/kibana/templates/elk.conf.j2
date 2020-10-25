@@ -1,7 +1,7 @@
 server {
     listen 80;
 
-    server_name {{ dns_name }};
+    server_name {{ dns_or_IP }};
     
     location / {
         proxy_pass http://localhost:5601;
