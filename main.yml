@@ -20,3 +20,7 @@
   - name: Install Kibana
     import_role:
       name: kibana
+
+  - name: Install Logstash
+    import_role:
+      name: logstash
