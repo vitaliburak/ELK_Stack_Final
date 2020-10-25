@@ -23,6 +23,9 @@
     dest: /etc/logstash/conf.d/30-elasticsearch-output.conf
   notify: Restart Logstash
 
+# - name: 
+#   shell: sudo -u logstash /usr/share/logstash/bin/logstash --path.settings /etc/logstash -t
+#   notify: Restart Logstash
 
 - name: Force systemd to reread configs
   systemd: daemon_reload=yes
