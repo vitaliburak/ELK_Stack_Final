@@ -1,9 +1,3 @@
-input {
-  beats {
-    port => 5044
-  }
-}
-
 filter {
   if [fileset][module] == "system" {
     if [fileset][name] == "auth" {
@@ -38,13 +32,5 @@ filter {
         match => [ "[system][syslog][timestamp]", "MMM  d HH:mm:ss", "MMM dd HH:mm:ss" ]
       }
     }
-  }
-}
-
-output {
-  elasticsearch {
-    hosts => "localhost:9200"
-    manage_template => false
-    index => "%{[@metadata][beat]}-%{[@metadata][version]}-%{+YYYY.MM.dd}"
   }
 }

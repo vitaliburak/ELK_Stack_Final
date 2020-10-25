@@ -24,3 +24,7 @@
   - name: Install Logstash
     import_role:
       name: logstash
+
+  - name: Install Filebeat
+    import_role:
+      name: filebeat
