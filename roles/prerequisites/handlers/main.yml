@@ -1,2 +1,7 @@
 ---
-# handlers file for prerequisites
+- name: Restart Nginx
+  become: true
+  service:
+    state: restarted
+    name: nginx
+  

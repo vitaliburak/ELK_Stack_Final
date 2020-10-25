@@ -10,7 +10,6 @@
 - name: Install Ansible and more
   yum:
     name:
-    - ansible
     - wget
     - nginx
     state: latest
@@ -20,4 +19,5 @@
     name: nginx
     state: started
     enabled: yes
+  notify: Restart Nginx
   
