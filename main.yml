@@ -30,7 +30,7 @@
   #     name: filebeat
 
   roles:
-  - role: ansible-role-ssl-certs
+  - role: lip-computing.ssl-certs
     ssl_certs_common_name: "3.238.132.162"
     ssl_certs_country: "PT"
     ssl_certs_locality: "Lisbon"
