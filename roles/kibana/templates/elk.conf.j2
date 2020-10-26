@@ -2,12 +2,12 @@ server {
     listen 443 http2 ssl;
     listen [::]:443 http2 ssl;
 
-    server_name 3.238.132.162;
+    server_name {{ dns_or_IP }};
 
 
-    ssl_certificate    /etc/ssl/3.238.132.162/3.238.132.162-cert.pem;
-    ssl_certificate_key  /etc/ssl/3.238.132.162/3.238.132.162-key.pem;
-    ssl_dhparam    /etc/ssl/3.238.132.162/dhparam.pem;
+    ssl_certificate    /etc/ssl/{{ dns_or_IP }}/{{ dns_or_IP }}-cert.pem;
+    ssl_certificate_key  /etc/ssl/{{ dns_or_IP }}/{{ dns_or_IP }}-key.pem;
+    ssl_dhparam    /etc/ssl/{{ dns_or_IP }}/dhparam.pem;
 
 
     
