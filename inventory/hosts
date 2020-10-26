@@ -2,4 +2,5 @@
 
 
 [remote]
-54.210.82.245   ansible_user=centos
+18.224.94.195   ansible_user=centos
+18.218.197.180   ansible_user=centos
